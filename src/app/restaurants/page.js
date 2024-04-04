@@ -2,6 +2,8 @@
 import { useState } from "react";
 import RestaurantLogin from "../_components/restaurantLogin";
 import RestaurantSignUp from '../_components/restaurantSignUp'
+import RestaurantHeader from "../_components/resturantHeader";
+import './style.css';
 const Restaurant=()=>{
  
  const[login,setLogin]=useState(true)
@@ -9,6 +11,7 @@ const Restaurant=()=>{
   return(
     <>
      <div className="container">
+      <RestaurantHeader/>
    <h1> Restaurant Page</h1>
    {login ? <RestaurantLogin/>:<RestaurantSignUp/>}
   
